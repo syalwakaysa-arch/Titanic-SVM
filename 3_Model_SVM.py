@@ -3,7 +3,7 @@ import streamlit as st
 import joblib
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents
 MODEL_PATH = ROOT / "models" / "svm_titanic.joblib"
 
 st.title("🧠 Model Support Vector Machine")
