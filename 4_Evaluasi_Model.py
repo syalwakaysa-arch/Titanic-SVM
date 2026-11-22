@@ -4,7 +4,7 @@ import pandas as pd
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents
+ROOT = Path(__file__).resolve().parent
 RESULT_PATH = ROOT / "models" / "evaluation.json"
 
 st.title("📈 Evaluasi Model SVM")
