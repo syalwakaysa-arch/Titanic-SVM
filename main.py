@@ -12,22 +12,22 @@ st.set_page_config(
 # ==============================
 
 beranda = st.Page(
-    "pages/0_Beranda.py",
+    "0_Beranda.py",
     title="Beranda",
     icon="🏠",
     url_path="beranda",
-    default=True
+    default=True,
 )
 
 dataset = st.Page(
-    "pages/1_Dataset.py",
+    "1_Dataset.py",
     title="Tentang Dataset",
     icon="🗃️",
     url_path="dataset"
 )
 
 eda = st.Page(
-    "pages/7_Eksplorasi_Data.py",
+    "7_Eksplorasi_Data.py",
     title="Eksplorasi Data (EDA)",
     icon="📊",
     url_path="eksplorasi-data"
@@ -38,21 +38,21 @@ eda = st.Page(
 # ==============================
 
 pembersihan = st.Page(
-    "pages/2_Pembersihan_Data.py",
+    "2_Pembersihan_Data.py",
     title="Pembersihan Data",
     icon="🎚️",
     url_path="pembersihan-data"
 )
 
 model = st.Page(
-    "pages/3_Model_SVM.py",
+    "3_Model_SVM.py",
     title="Model SVM",
     icon="🧠",
     url_path="model-svm"
 )
 
 evaluasi = st.Page(
-    "pages/4_Evaluasi_Model.py",
+    "4_Evaluasi_Model.py",
     title="Evaluasi Model",
     icon="📈",
     url_path="evaluasi-model"
@@ -63,7 +63,7 @@ evaluasi = st.Page(
 # ==============================
 
 prediksi = st.Page(
-    "pages/5_Prediksi.py",
+    "5_Prediksi.py",
     title="Prediksi Penumpang",
     icon="🚢",
     url_path="prediksi"
@@ -74,7 +74,7 @@ prediksi = st.Page(
 # ==============================
 
 tentang = st.Page(
-    "pages/6_Tentang.py",
+    "6_Tentang.py",
     title="Tentang Aplikasi",
     icon="ℹ️",
     url_path="tentang"
