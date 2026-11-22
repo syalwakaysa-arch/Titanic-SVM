@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents
+ROOT = Path(__file__).resolve().parent
 
 st.title("📊 Eksplorasi Data Titanic")
 
