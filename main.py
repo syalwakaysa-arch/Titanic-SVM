@@ -1,75 +1,155 @@
+
 import streamlit as st
 
 st.set_page_config(
-    page_title="Titanic SVM",
+    page_title="Titanic SVM Classification",
     page_icon="🚢",
-    layout="wide",
+    layout="wide"
 )
 
+# ==========================
+# CUSTOM CSS SIDEBAR
+# ==========================
+
+st.markdown("""
+<style>
+
+/* Background sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #202020;
+}
+
+/* Tulisan sidebar */
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] span {
+    color: #E8E8E8;
+}
+
+/* Menu navigasi */
+section[data-testid="stSidebar"]
+[data-testid="stSidebarNav"] a {
+    border-radius: 9px;
+    margin: 4px 8px;
+    padding: 9px 12px;
+}
+
+/* Menu aktif */
+section[data-testid="stSidebar"]
+[data-testid="stSidebarNav"] a[aria-current="page"] {
+    background-color: #454545;
+    border-left: 3px solid #FFFFFF;
+}
+
+/* Hover */
+section[data-testid="stSidebar"]
+[data-testid="stSidebarNav"] a:hover {
+    background-color: #383838;
+}
+
+/* Konten utama */
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+
+# ==========================
+# PENGANTAR
+# ==========================
+
 beranda = st.Page(
-    "0_Beranda.py",
+    "pages/0_Beranda.py",
     title="Beranda",
-    icon="🏠",
-    url_path="beranda",
-    default=True,
+    icon=":material/home:",
+    default=True
 )
 
 dataset = st.Page(
-    "1_Dataset.py",
+    "pages/1_Dataset.py",
     title="Tentang Dataset",
-    icon="📄",
-    url_path="dataset",
+    icon=":material/database:"
 )
 
 eda = st.Page(
-    "7_Eksplorasi_Data.py",
+    "pages/2_Eksplorasi_Data.py",
     title="Eksplorasi Data (EDA)",
-    icon="📊",
-    url_path="eda",
+    icon=":material/bar_chart:"
 )
 
-pembersihan = st.Page(
-    "2_Pembersihan_Data.py",
-    title="Pembersihan Data",
-    icon="🧹",
-    url_path="pembersihan",
+
+# ==========================
+# PENGOLAHAN & MODEL
+# ==========================
+
+preprocessing = st.Page(
+    "pages/3_Preprocessing.py",
+    title="Preprocessing",
+    icon=":material/tune:"
 )
 
-model = st.Page(
-    "3_Model_SVM.py",
-    title="Model SVM",
-    icon="🧠",
-    url_path="model",
+lda = st.Page(
+    "pages/4_Reduksi_Dimensi_LDA.py",
+    title="Reduksi Dimensi (LDA)",
+    icon=":material/hub:"
+)
+
+optimasi = st.Page(
+    "pages/5_Teknik_Optimasi_SVM.py",
+    title="Teknik Optimasi (SVM)",
+    icon=":material/auto_fix_high:"
 )
 
 evaluasi = st.Page(
-    "4_Evaluasi_Model.py",
-    title="Evaluasi Model",
-    icon="📈",
-    url_path="evaluasi",
+    "pages/6_Modelling_Evaluasi.py",
+    title="Modelling & Evaluasi",
+    icon=":material/analytics:"
 )
+
+
+# ==========================
+# PENERAPAN
+# ==========================
 
 prediksi = st.Page(
-    "5_Prediksi.py",
+    "pages/7_Prediksi_Penumpang.py",
     title="Prediksi Penumpang",
-    icon="🚢",
-    url_path="prediksi",
+    icon=":material/person_search:"
 )
 
-tentang = st.Page(
-    "6_Tentang.py",
-    title="Tentang Aplikasi",
-    icon="ℹ️",
-    url_path="tentang",
+kesimpulan = st.Page(
+    "pages/8_Kesimpulan_Saran.py",
+    title="Kesimpulan & Saran",
+    icon=":material/task_alt:"
 )
 
-pg = st.navigation(
-    {
-        "Pengantar": [beranda, dataset, eda],
-        "Pengolahan & Model": [pembersihan, model, evaluasi],
-        "Penerapan": [prediksi],
-        "Lainnya": [tentang],
-    }
-)
+
+# ==========================
+# NAVIGASI UTAMA
+# ==========================
+
+pg = st.navigation({
+
+    "Pengantar": [
+        beranda,
+        dataset,
+        eda
+    ],
+
+    "Pengolahan & Model": [
+        preprocessing,
+        lda,
+        optimasi,
+        evaluasi
+    ],
+
+    "Penerapan": [
+        prediksi,
+        kesimpulan
+    ]
+
+})
 
 pg.run()
