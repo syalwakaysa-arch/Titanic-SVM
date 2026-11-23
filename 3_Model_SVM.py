@@ -4,7 +4,7 @@ import joblib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-MODEL_PATH = ROOT / "models" / "svm_titanic.joblib"
+MODEL_PATH = ROOT / "svm_titanic.joblib"
 
 st.title("🧠 Model Support Vector Machine")
 
