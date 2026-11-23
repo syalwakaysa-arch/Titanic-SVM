@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.
+ROOT = Path(__file__).resolve().parent
 
 st.title("📊 Dataset Titanic")
 
