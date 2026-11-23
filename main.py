@@ -152,4 +152,3 @@ pg = st.navigation({
 })
 
 pg.run()
-nah kalo mau ditambahin warna gitu gimana?
