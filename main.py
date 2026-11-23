@@ -74,7 +74,7 @@ dataset = st.Page(
 )
 
 eda = st.Page(
-    "pages/2_Eksplorasi_Data.py",
+    "pages/7_Eksplorasi_Data.py",
     title="Eksplorasi Data (EDA)",
     icon=":material/bar_chart:"
 )
@@ -85,25 +85,25 @@ eda = st.Page(
 # ==========================
 
 preprocessing = st.Page(
-    "pages/3_Preprocessing.py",
+    "pages/2_Pembersihan_Data.py",
     title="Preprocessing",
     icon=":material/tune:"
 )
 
-lda = st.Page(
-    "pages/4_Reduksi_Dimensi_LDA.py",
-    title="Reduksi Dimensi (LDA)",
+pca = st.Page(
+    "pages/9_Reduksi_Dimensi_PCA.py",
+    title="Reduksi Dimensi (PCA)",
     icon=":material/hub:"
 )
 
 optimasi = st.Page(
-    "pages/5_Teknik_Optimasi_SVM.py",
+    "pages/3_Model_SVM.py",
     title="Teknik Optimasi (SVM)",
     icon=":material/auto_fix_high:"
 )
 
 evaluasi = st.Page(
-    "pages/6_Modelling_Evaluasi.py",
+    "pages/4_Evaluasi_Model.py",
     title="Modelling & Evaluasi",
     icon=":material/analytics:"
 )
@@ -114,7 +114,7 @@ evaluasi = st.Page(
 # ==========================
 
 prediksi = st.Page(
-    "pages/7_Prediksi_Penumpang.py",
+    "pages/5_Prediksi.py",
     title="Prediksi Penumpang",
     icon=":material/person_search:"
 )
@@ -140,7 +140,7 @@ pg = st.navigation({
 
     "Pengolahan & Model": [
         preprocessing,
-        lda,
+        pca,
         optimasi,
         evaluasi
     ],
